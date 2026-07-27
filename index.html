@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>SEGA | Sonic Web Flash Archive</title>
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico">
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 30px 20px;
+
+        overflow: hidden;
+
+        position: relative;
+
+        background: #050a0f;
+    }
+
+    /*
+    Fundo com blur
+    */
+
+    body::before {
+
+        content: "";
+
+        position: fixed;
+
+        inset: -30px;
+
+        background-image: url("https://gdgohan.github.io/UnleashedRecomp-Android/website/background.webp");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: blur(5px);
+
+        transform: scale(1.05);
+
+        z-index: -2;
+    }
+
+    /*
+    Escurecimento opcional sobre o fundo
+    */
+
+    body::after {
+
+        content: "";
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.25);
+
+        z-index: -1;
+    }
+
+    .container {
+
+        width: 100%;
+        max-width: 1200px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .imagem-link {
+
+        display: block;
+
+        width: 45%;
+
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease;
+    }
+
+    .imagem-link img {
+
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        border-radius: 12px;
+
+        object-fit: contain;
+    }
+
+    .imagem-link:hover {
+
+        transform: scale(1.05);
+
+        filter: brightness(1.15);
+    }
+
+    /*
+    Celular
+    */
+
+    @media (max-width: 768px) {
+
+        body {
+
+            padding: 20px 15px;
+
+            overflow-y: auto;
+        }
+
+        .container {
+
+            flex-direction: column;
+
+            gap: 25px;
+        }
+
+        .imagem-link {
+
+            width: 100%;
+
+            max-width: 500px;
+        }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <a href="https://gdgohan.github.io/UnleashedRecomp-Android/website/swf/index.html" class="imagem-link">
+
+        <img
+            src="https://gdgohan.github.io/UnleashedRecomp-Android/website/swf/logo.gif"
+            alt="World Adventure">
+
+    </a>
+
+    <a href="https://gdgohan.github.io/UnleashedRecomp-Android/website/Night-of-the-Werehog/index.html" class="imagem-link">
+
+        <img
+            src="https://gdgohan.github.io/UnleashedRecomp-Android/website/Night-of-the-Werehog/logo.jpg"
+            alt="Night of the Werehog">
+
+    </a>
+	
+	<a href="https://gdgohan.github.io/web-sonic-flash-promotional-archive/BlackKnight/index.html" class="imagem-link">
+
+        <img
+            src="https://gdgohan.github.io/web-sonic-flash-promotional-archive/BlackKnight/sbk_Logo_Jpn_web.jpg"
+            alt="Black Knight">
+
+    </a>
+
+</main>
+
+</body>
+
+</html>
