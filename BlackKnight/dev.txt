@@ -1,0 +1,16 @@
+}
+catch(error:Error)
+{
+}
+
+import flash.external.ExternalInterface;
+private function logConsole(message:String):void
+{
+   if(ExternalInterface.available)
+   {
+      ExternalInterface.call(
+         "console.log",
+         message
+      );
+   }
+}
