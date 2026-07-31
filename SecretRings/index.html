@@ -54,16 +54,16 @@ function popWin() {
 	
 <script>
 
-        var sw = window.innerWidth;
-        var sh = window.innerHeight;
+        var sw = 1080;
+        var sh = 800;
         
         function resize() {
-			sw = window.innerWidth;
-			sh = window.innerHeight;
+			// sw = window.innerWidth;
+			// sh = window.innerHeight;
 
 	        const scale = Math.min(
-                sw / 1080,
-                sh / 800
+                window.innerWidth / 1080,
+                window.innerHeight / 800
             );
 			
 			const vp = document.getElementById("flashcontent");
