@@ -134,19 +134,25 @@
         return asset;
     }
 
-    async function downloadPackage(url) {
-        log("Baixando pacote:", url);
-
+    async function downloadPackage(asset) {
+        const url =
+            `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/releases/assets/${asset.id}`;
+    
+        log("Baixando asset pela API:", url);
+    
         const response = await fetch(url, {
+            headers: {
+                "Accept": "application/octet-stream"
+            },
             cache: "no-store"
         });
-
+    
         if (!response.ok) {
             throw new Error(
                 `Download do Ruffle falhou: HTTP ${response.status}`
             );
         }
-
+    
         return await response.arrayBuffer();
     }
 
@@ -382,9 +388,7 @@
             log("Pacote:", asset.name);
 
             const arrayBuffer =
-                await downloadPackage(
-                    asset.browser_download_url
-                );
+                await downloadPackage(asset);
 
             const extracted =
                 await extractZip(arrayBuffer);
