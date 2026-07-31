@@ -60,9 +60,14 @@ function popWin() {
         function resize() {
 			sw = window.innerWidth;
 			sh = window.innerHeight;
+
+	        const scale = Math.min(
+                sw / 1080,
+                sh / 800
+            );
 			
 			const vp = document.getElementById("flashcontent");
-			const scale = Math.min(sw / 800, 1);
+			// const scale = Math.min(sw / 800, 1);
 
 			vp.style.transform = `scale(${scale})`;
 		}
