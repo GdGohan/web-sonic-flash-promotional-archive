@@ -48,15 +48,10 @@ function popWin() {
 		
 		#flashcontent {
 		    position: absolute;
-		    width: 100vw;
-		    height: 100vh;
-		
-		    left: 50%;
-		    top: 50%;
-		
 		    transform-origin: center center;
 		    overflow: hidden;
 		}
+		
 	</style>
     <script src="https://gdgohan.github.io/web-sonic-flash-promotional-archive/ruffle/ruffle.js"></script>
 	<script>
@@ -73,29 +68,34 @@ function popWin() {
 		};
 	</script>
 	
-<script>
+	<script>
 
         var sw = 1080;
         var sh = 800;
-        
+
         function resize() {
-			// sw = window.innerWidth;
-			// sh = window.innerHeight;
-
-	        const scale = Math.min(
-                window.innerWidth / 1080,
-                window.innerHeight / 800
-            );
-			
+		    const player = document.querySelector("#rings");
+            
 			const vp = document.getElementById("flashcontent");
-			// const scale = Math.min(sw / 800, 1);
+			
+			if (!player) {
+			    vp.style.width = "100%";
+				vp.style.height = "100%";
+				return;
+			}
 
-			vp.style.transform = `translate(-50%, -50%) scale(${scale})`;
+			const scale = Math.min(
+				window.innerWidth / sw,
+				window.innerHeight / sh
+			);
+			
+			vp.style.top = "50%";
+			vp.style.left = "50%";
+
+			vp.style.transform =
+				`translate(-50%, -50%) scale(${scale})`;
 		}
-        
-        window.addEventListener("resize", resize);
-        resize();
-
+       
 		var so = new SWFObject("swf/top.swf", "rings", sw, sh, "8", "#000000");
 
         so.addParam("allowFullScreen", "true");
@@ -106,6 +106,9 @@ function popWin() {
         so.addParam("menu", "false");
 
         so.write("flashcontent");
+		
+		window.addEventListener("resize", resize);
+        resize();
     </script>
 </body>
 </html>
