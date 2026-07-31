@@ -38,12 +38,24 @@ function popWin() {
 	</div>
 </div>
 	<style>
+		html, body {
+		    margin: 0;
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+		    background: #000;
+		}
+		
 		#flashcontent {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-			transform-origin: center center;
+		    position: absolute;
+		    width: 100vw;
+		    height: 100vh;
+		
+		    left: 50%;
+		    top: 50%;
+		
+		    transform-origin: center center;
+		    overflow: hidden;
 		}
 	</style>
     <script src="https://gdgohan.github.io/web-sonic-flash-promotional-archive/ruffle/ruffle.js"></script>
@@ -78,7 +90,7 @@ function popWin() {
 			const vp = document.getElementById("flashcontent");
 			// const scale = Math.min(sw / 800, 1);
 
-			vp.style.transform = `scale(${scale})`;
+			vp.style.transform = ``translate(-50%, -50%) scale(${scale})`;
 		}
         
         window.addEventListener("resize", resize);
