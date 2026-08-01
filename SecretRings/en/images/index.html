@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+        
+    <title>SEGA | SECRET RINGS</title>
+
+    <link rel="shortcut icon" href="../../../favicon.ico">
+	<link rel="icon" href="../../../favicon.ico">
+
+	<script>
+		window.RufflePlayer = window.RufflePlayer || {};
+		window.RufflePlayer.config = {
+		    fontSources: [
+				"../../../../fonts/NotoSansJP-Regular.ttf"
+			],
+			defaultFonts: {
+				sans: ["Noto Sans JP Regular"],
+			},
+			autoplay: "off",
+			unmuteOverlay: "visible",
+			letterbox: "on",
+            scale: "showAll",
+			quality: "best"
+		};
+	</script>
+
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	<script src="../../swfobject.js"></script>
+  
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #050a0f;
+        }
+
+        #flashcontent {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+		
+		#viewport {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform-origin: center center;
+        }
+
+        ruffle-player {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="flashcontent">
+        <div id="viewport"></div>
+    </div>
+
+    <script>
+        var bgcolor = "#050a0f";
+        
+        const sw = 1280;
+        const sh = 750;
+        
+        function resize() {
+            const scale = Math.min(
+                window.innerWidth / sw,
+                window.innerHeight / sh
+            );
+        
+            const vp = document.getElementById("viewport");
+        
+            vp.style.transform =
+                `translate(-50%, -50%) scale(${scale})`;
+        }
+        
+        window.addEventListener("resize", resize);
+        resize();
+
+         var so = new SWFObject(
+            "LaunchTrailer.swf",
+            "external_flashcontent",
+            sw,
+            sh,
+            "9",
+            bgcolor
+        );
+
+        so.addParam("allowFullScreen", "true");
+        so.addParam("allowScriptAccess", "always");
+
+        so.addParam("wmode", "window");
+        so.addParam("quality", "best");
+        so.addParam("scale", "showAll");
+
+        so.write("viewport");
+    </script>
+
+</body>
+
+</html>
