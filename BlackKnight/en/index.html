@@ -79,8 +79,106 @@ body {
 <div id="container">
 
 	<div id="flashcontent">This site requires the Flash player.</div> 
-	<script type="text/javascript">
-	    var so = new SWFObject("flash.swf", "Sonic And The Black Knight", "1000", "575", "8", "#000000");
+
+	<script src="https://cdn.jsdelivr.net/npm/pako@2/dist/pako.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lzma/src/lzma.js"></script>
+
+	<script>
+	    const vp = document.getElementById("flashcontent");
+    
+        var sw = 1000;
+        var sh = 575;
+		
+		async function getSWFSize(url) {
+        const buffer = await fetch(url).then(r => r.arrayBuffer());
+    
+        let bytes = new Uint8Array(buffer);
+        const sig = String.fromCharCode(bytes[0], bytes[1], bytes[2]);
+    
+        if (sig === "CWS") {
+            const header = bytes.slice(0, 8);
+            const body = pako.inflate(bytes.slice(8));
+    
+            bytes = new Uint8Array(8 + body.length);
+            bytes.set(header);
+            bytes.set(body, 8);
+            bytes[0] = 0x46; // F
+        } else if (sig === "ZWS") {
+            const compressed = bytes.slice(12);
+        
+            const body = await new Promise((resolve, reject) => {
+                LZMA.decompress(compressed, function (result, error) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(new Uint8Array(result));
+                    }
+                });
+            });
+        
+            const out = new Uint8Array(8 + body.length);
+        
+            out.set(bytes.slice(0, 8), 0);
+            out.set(body, 8);
+            out[0] = 0x46; // FWS
+        
+            bytes = out;
+        } else if (sig !== "FWS") {
+            throw new Error("Invalid SWF.");
+        }
+    
+        let pos = 8;
+        let bitPos = 5;
+    
+        const nBits = bytes[pos] >> 3;
+    
+        function readBits(n) {
+            let value = 0;
+    
+            for (let i = 0; i < n; i++) {
+                const byte = bytes[pos + ((bitPos + i) >> 3)];
+                const bit = (byte >> (7 - ((bitPos + i) & 7))) & 1;
+                value = (value << 1) | bit;
+            }
+    
+            bitPos += n;
+            return value;
+        }
+    
+        readBits(nBits);
+        const xmax = readBits(nBits);
+        readBits(nBits);
+        const ymax = readBits(nBits);
+    
+        return {
+            width: xmax / 20,
+            height: ymax / 20
+        };
+    }
+
+		function resize() {
+        const scale = Math.min(
+            window.innerWidth / sw,
+            window.innerHeight / sh
+        );
+    
+        vp.style.transform =
+            `translate(-50%, -50%) scale(${scale})`;
+    }
+
+    (async () => {
+        const v = await getSWFSize("flash.swf");
+    
+        sw = v.width;
+        sh = v.height;
+    
+        // vp.style.width = sw + "px";
+        // vp.style.height = sh + "px";
+        
+        window.addEventListener("resize", resize);
+        resize();
+
+        var so = new SWFObject("flash.swf", "Sonic And The Black Knight", sw, sh, "8", "#000000");
 		so.addVariable("siteLive", "true");
 		so.addVariable("territory", "us");
 		so.addVariable("phase", "3");
@@ -88,6 +186,8 @@ body {
 		so.addParam("menu", "false");		
 		so.addParam("wmode", "opaque");
 		so.write("flashcontent");
+		
+    })();
 	</script>
 
 	<div id="legal">
