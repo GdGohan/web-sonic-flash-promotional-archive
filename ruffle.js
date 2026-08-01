@@ -135,21 +135,38 @@
     }
 
     async function downloadPackage(asset) {
-        const url =
-            `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/releases/assets/${asset.id}`;
+        // Em localhost, usa o proxy Python.
+        if (
+            location.hostname === "localhost" ||
+            location.hostname === "127.0.0.1"
+        ) {
+            const response = await fetch(
+                "/api/ruffle-zip",
+                {
+                    cache: "no-store"
+                }
+            );
     
-        log("Baixando asset pela API:", url);
+            if (!response.ok) {
+                throw new Error(
+                    `Proxy local retornou HTTP ${response.status}`
+                );
+            }
     
-        const response = await fetch(url, {
-            headers: {
-                "Accept": "application/octet-stream"
-            },
-            cache: "no-store"
-        });
+            return await response.arrayBuffer();
+        }
+    
+        // No GitHub Pages, tenta diretamente.
+        const response = await fetch(
+            asset.browser_download_url,
+            {
+                cache: "no-store"
+            }
+        );
     
         if (!response.ok) {
             throw new Error(
-                `Download do Ruffle falhou: HTTP ${response.status}`
+                `Download retornou HTTP ${response.status}`
             );
         }
     
