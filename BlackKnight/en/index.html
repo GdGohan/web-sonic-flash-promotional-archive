@@ -84,7 +84,7 @@ body {
     <script src="https://cdn.jsdelivr.net/npm/lzma/src/lzma.js"></script>
 
 	<script>
-	    const vp = document.getElementById("flashcontent");
+	    const vp = document.getElementById("container");
     
         var sw = 1000;
         var sh = 575;
@@ -163,7 +163,7 @@ body {
         );
     
         vp.style.transform =
-            `translate(50%, 50%) scale(${scale})`;
+            `translate(-50%, -50%) scale(${scale})`;
     }
 
     (async () => {
