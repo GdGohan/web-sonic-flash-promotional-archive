@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="JavaScript" src="/include/swfobject.js" type="text/javascript"></script>
+<script language="JavaScript" src="../js/swfobject.js" type="text/javascript"></script>
+<script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+
+<title>SEGA: Sonic And The Black Knight</title>
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #000000;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background: url(../images/background.jpg) 50% 0;
+	background-repeat: no-repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000000;
+}
+.oneColFixCtr #container {
+	margin: 0 auto;
+	text-align: center;
+	width: 1000px;
+}
+.oneColFixCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+
+
+.oneColFixCtr #legal {
+	text-align: center;
+	margin: 40px auto 0 auto;
+	width: 1000px;
+}
+
+.oneColFixCtr #legalText {
+	
+	color: #555555;
+	font-family: Arial;
+	font-size: 10px;
+	margin: 0 auto;
+	width: 750px;
+}
+
+.oneColFixCtr #legalSony {
+	
+	color: #666666;
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0 auto;
+	width: 750px;
+}
+
+.oneColFixCtr #legalLogos table {
+	padding-top: 0px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+.oneColFixCtr #legalLogos td {
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+-->
+</style></head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+
+	<div id="flashcontent">This site requires the Flash player.</div> 
+	<script type="text/javascript">
+	    var so = new SWFObject("../flash.swf", "Sonic And The Black Knight", "1000", "575", "8", "#000000");
+		so.addVariable("siteLive", "true");
+		so.addVariable("territory", "us");
+		so.addVariable("phase", "3");
+	    so.addParam("quality", "high");
+		so.addParam("menu", "false");		
+		so.addParam("wmode", "opaque");
+		so.write("flashcontent");
+	</script>
+
+	<div id="legal">
+		<br /><Br /><br /><br />
+		<div id="legalText">
+			<p>©SEGA. SEGA is registered in the U.S. Patent Trademark Office. SEGA, the SEGA logo, Sonic The Hedgehog and Sonic and the Black Knight are either registered trademarks or trademarks of SEGA Corporation. Wii AND THE Wii LOGO ARE TRADEMARKS OF NINTENDO. © 2006 Nintendo
+ </p>
+		</div>
+		<div id="legalLogos"><br /><br />
+		<table border="0" cellpadding="0" cellspacing="0" align="center">
+		 <tr>
+			<td align="center"><table border="0" cellpadding="0" cellspacing="0" align="center">
+			  <tr valign="middle">
+				  <td height="102" valign="middle"><a href="http://www.sega.com" target="_new"><img src="../images/logos/sega.gif" alt="" hspace="20" vspace="10" border="0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				  <td ><img src="../images/logos/sonicteam.gif" alt="" hspace="20" vspace="10" border="0" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td ><img src="../images/logos/wii.gif" alt="" hspace="20" vspace="10" border="0" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td ><a href="http://www.esrb.org" target="_new"><img src="../images/logos/esrb.gif" alt="" hspace="20" vspace="10" border="0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td ><a href="http://www.sega.com/legal/privacy.php" target="_new"><img src="https://www.esrb.org/privacy/members/privacy_certified-2008.gif" alt="" hspace="20" vspace="10" border="0" /></a></td>
+					</tr>
+				</table>
+		   </td>
+		 </tr>
+		 <tr height="30">
+		 <td>
+		  </td>
+		 </tr>
+		
+		</table>
+		</div>
+		
+	</div>
+
+</div>
+
+<!-- SiteCatalyst code version: H.15.1.
+Copyright 1997-2008 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script type="text/javascript">
+//<![[CDATA[[
+var s_account = "segaglobal,segaus";
+//]]>
+</script>
+
+<script type="text/javascript" src="http://www.sega.com/sonicblackknight/js/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="www.sega.com/Sonic and the Black Knight/"
+s.server=""
+s.channel=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop15="US"
+s.prop20="Sonic and the Black Knight"
+s.prop21=""
+s.prop22=""
+s.account=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.transactionID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/* Hierarchy Variables */
+s.hier1=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+src="http://segaglobal.112.2O7.net/b/ss/segaglobal/1/H.16--NS/0"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.16. -->
+
+
+</body>
+<script>document.write('<s'+'cript language="JavaScript" src="http://view.atdmt.com/jaction/msishc_SonicandtheBlackKnight_1"></s'+'cript>')</script><noscript><iframe src="http://view.atdmt.com/iaction/msishc_SonicandtheBlackKnight_1" width="1" height="1" frameborder="0" scrolling="No" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0"></iframe></noscript>
+</html>
