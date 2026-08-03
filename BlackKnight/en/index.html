@@ -200,9 +200,6 @@ body {
     
         sw = v.width;
         sh = v.height * 1.25;
-        
-        window.addEventListener("resize", resize);
-        resize();
 
         var so = new SWFObject("flash.swf", "Sonic And The Black Knight", sw, sh, "8", "#000000");
 		so.addVariable("siteLive", "true");
@@ -212,6 +209,9 @@ body {
 		so.addParam("menu", "false");		
 		so.addParam("wmode", "opaque");
 		so.write("container");
+		
+		window.addEventListener("resize", resize);
+        resize();
 		
     })();
 	</script>
