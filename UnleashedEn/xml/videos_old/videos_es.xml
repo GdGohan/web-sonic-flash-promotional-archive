@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<site>
+	<movies>
+		<item heading="GAMEPLAY TRÁILER 7" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t14.jpg" url="../movies/vid14_uk.flv"/>
+		<item heading="WII TRÁILER 4" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t13.jpg" url="../movies/vid13_uk.flv"/>
+		
+		<item heading="GAMEPLAY TRÁILER 6" description="" month="11" day="10" year="08" thumb="../movies/thumbs/t12.jpg" url="../movies/vid12_uk.flv"/>
+		<item heading="WII TRÁILER 3" description="" month="11" day="10" year="08" thumb="../movies/thumbs/t11.jpg" url="../movies/vid11_uk.flv"/>
+		
+		<item heading="GAMEPLAY TRÁILER 5" description="" month="10" day="28" year="08" thumb="../movies/thumbs/t10.jpg" url="../movies/vid10_uk.flv"/>
+		<item heading="WII TRÁILER 2" description="" month="10" day="28" year="08" thumb="../movies/thumbs/t09.jpg" url="../movies/vid09_uk.flv"/>
+		
+		<item heading="GAMEPLAY TRÁILER 4" description="" month="10" day="17" year="08" thumb="../movies/thumbs/t07.jpg" url="../movies/vid07_uk.flv"/>
+		<item heading="WII TRÁILER" description="" month="10" day="17" year="08" thumb="../movies/thumbs/t08.jpg" url="../movies/vid08_uk.flv"/>
+		
+		<item heading="WEREHOG TEASER" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t06.jpg" url="../movies/vid06_uk.flv"/>
+		<item heading="GAMEPLAY TRÁILER 1" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t01.jpg" url="../movies/vid01_uk.flv"/>
+		<item heading="GAMEPLAY TRÁILER 2" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t02.jpg" url="../movies/vid02_uk.flv"/>
+		<item heading="MYSTERIOUS FOOTAGE" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t05.jpg" url="../movies/vid05_uk.flv"/>
+		<item heading="E3 2008 TRÁILER" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t03.jpg" url="../movies/vid03_uk.flv"/>
+		<item heading="GAMEPLAY TRÁILER 3" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t04.jpg" url="../movies/vid04_uk.flv"/>
+	</movies>
+
+	<title>
+					<item heading="Videos" size = "10"/>
+	<title
+</site>

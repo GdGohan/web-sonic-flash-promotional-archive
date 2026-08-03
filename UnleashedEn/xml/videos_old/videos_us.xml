@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<site>
+	<movies><item heading="NEXT-GEN LAUNCH TRAILER #1" description="" month="11" day="24" year="08" thumb="../movies/thumbs/t20.jpg" url="../movies/vid20.flv"/>
+		<item heading="Wii/PS2 LAUNCH TRAILER" description="" month="11" day="24" year="08" thumb="../movies/thumbs/t19.jpg" url="../movies/vid19.flv"/>
+		
+		<item heading="GAMEPLAY TRAILER 8" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t18.jpg" url="../movies/vid18.flv"/>
+		<item heading="WII TRAILER 5" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t17.jpg" url="../movies/vid17.flv"/>
+		<item heading="TV COMMERCIAL 2" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t16.jpg" url="../movies/vid16.flv"/>
+		<item heading="TV COMMERCIAL 1" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t15.jpg" url="../movies/vid15.flv"/>
+		
+		<item heading="GAMEPLAY TRAILER 7" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t14.jpg" url="../movies/vid14.flv"/>
+		<item heading="WII TRAILER 4" description="" month="11" day="14" year="08" thumb="../movies/thumbs/t13.jpg" url="../movies/vid13.flv"/>
+		
+		<item heading="GAMEPLAY TRAILER 6" description="" month="11" day="10" year="08" thumb="../movies/thumbs/t12.jpg" url="../movies/vid12.flv"/>
+		<item heading="WII TRAILER 3" description="" month="11" day="10" year="08" thumb="../movies/thumbs/t11.jpg" url="../movies/vid11.flv"/>
+		
+		<item heading="GAMEPLAY TRAILER 5" description="" month="10" day="28" year="08" thumb="../movies/thumbs/t10.jpg" url="../movies/vid10.flv"/>
+		<item heading="WII TRAILER 2" description="" month="10" day="28" year="08" thumb="../movies/thumbs/t09.jpg" url="../movies/vid09.flv"/>
+		
+		<item heading="GAMEPLAY TRAILER 4" description="" month="10" day="17" year="08" thumb="../movies/thumbs/t07.jpg" url="../movies/vid07.flv"/>
+		<item heading="WII TRAILER" description="" month="10" day="17" year="08" thumb="../movies/thumbs/t08.jpg" url="../movies/vid08.flv"/>
+		
+		<item heading="WEREHOG TEASER" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t06.jpg" url="../movies/vid06.flv"/>
+		<item heading="GAMEPLAY TRAILER 1" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t01.jpg" url="../movies/vid01.flv"/>
+		<item heading="GAMEPLAY TRAILER 2" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t02.jpg" url="../movies/vid02.flv"/>
+		<item heading="MYSTERIOUS FOOTAGE" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t05.jpg" url="../movies/vid05.flv"/>
+		<item heading="E3 2008 TRAILER" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t03.jpg" url="../movies/vid03.flv"/>
+		<item heading="GAMEPLAY TRAILER 3" description="" month="10" day="16" year="08" thumb="../movies/thumbs/t04.jpg" url="../movies/vid04.flv"/>
+	</movies>
+
+	<title>
+					<item heading="Videos" size = "10"/>
+	<title
+</site>

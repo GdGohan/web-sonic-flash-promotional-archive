@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<site>
+	<movies>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt01.jpg" url="../images/ns01.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt02.jpg" url="../images/ns02.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt03.jpg" url="../images/ns03.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt04.jpg" url="../images/ns04.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt05.jpg" url="../images/ns05.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt06.jpg" url="../images/ns06.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt07.jpg" url="../images/ns07.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt08.jpg" url="../images/ns08.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt09.jpg" url="../images/ns09.jpg"/>
+				<item heading="PANTALLAS" description="AÑADIDO EL 10/16/08" thumb="../images/thumbs/nt10.jpg" url="../images/ns10.jpg"/>
+				
+					
+		
+	</movies>
+	<title>
+				<item heading="PANTALLAS" size = "10"/>
+	<title
+
+</site>

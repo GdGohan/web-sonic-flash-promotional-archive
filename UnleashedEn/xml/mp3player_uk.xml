@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<player showDisplay="yes" showPlaylist="no" autoStart="yes">
+  <song path="../mp3/worldmap.mp3" title="worldmap" />
+  <song path="../mp3/spagoniaday.mp3" title="spagoniaday" />
+  <song path="../mp3/spagonianight.mp3" title="spagonianight" />
+  <song path="../mp3/apotosday.mp3" title="apotosday" />	
+  <song path="../mp3/apotosnight.mp3" title="apotosnight" />	
+  <song path="../mp3/chun-nanday.mp3" title="chun-nanday" />	
+  <song path="../mp3/chun-nannight.mp3" title="chun-nannight" />	
+  <song path="../mp3/shamarday.mp3" title="shamarday" />	
+  <song path="../mp3/shamarnight.mp3" title="shamarnight" />
+  <song path="../mp3/adabatday.mp3" title="adabatday" />	
+  <song path="../mp3/adabatnight.mp3" title="adabatnight" />  
+  <song path="../mp3/mazuriday.mp3" title="mazuriday" />	
+  <song path="../mp3/mazurinight.mp3" title="mazurinight" />	
+</player>
