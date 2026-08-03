@@ -29,7 +29,7 @@ body {
 .oneColFixCtr #container {
 	position: absolute;
 
-	left: 2%;
+	left: 0%;
 	top: 0;
 
 	margin: 0;
@@ -139,7 +139,6 @@ body {
 		
 		vp.style.width = "1216px";
 		vp.style.height = "707px";
-		vp.style.left = "50%";
 
 		const backgroundWidth = 1695;
 		const backgroundHeight = 891;
@@ -199,7 +198,10 @@ body {
         const v = await getSWFSize("flash.swf");
     
         sw = v.width;
-        sh = v.height * 1.25;
+        sh = v.height;
+		
+		window.addEventListener("resize", resize);
+        resize();
 
         var so = new SWFObject("flash.swf", "Sonic And The Black Knight", sw, sh, "8", "#000000");
 		so.addVariable("siteLive", "true");
@@ -209,9 +211,6 @@ body {
 		so.addParam("menu", "false");		
 		so.addParam("wmode", "opaque");
 		so.write("container");
-		
-		window.addEventListener("resize", resize);
-        resize();
 		
     })();
 	</script>
