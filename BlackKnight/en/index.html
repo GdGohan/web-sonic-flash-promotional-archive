@@ -10,67 +10,43 @@
 <title>SEGA: Sonic And The Black Knight</title>
 <style type="text/css">
 
+html,
 body {
-	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #000000;
-	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	margin: 0;
 	padding: 0;
-	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
-	color: #000000;
-	background: url(images/background.jpg) 50% 0;
-	background-repeat: no-repeat;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-color: #000000;
-}
-.oneColFixCtr #container {
-	margin: 0 auto;
-	text-align: center;
-	position: absolute;
-	transform-origin: center center;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
+
+	background-color: #000000;
+	background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	background-size: auto;
 }
+
+.oneColFixCtr #container {
+	position: absolute;
+
+	left: 50%;
+	top: 0;
+
+	margin: 0;
+	padding: 0;
+
+	width: 1216px;
+	height: 707px;
+
+	transform-origin: top center;
+
+	overflow: hidden;
+
+	text-align: center;
+}
+
 .oneColFixCtr #mainContent {
-	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-}
-
-
-.oneColFixCtr #legal {
-	text-align: center;
-	margin: 40px auto 0 auto;
-	width: 1000px;
-}
-
-.oneColFixCtr #legalText {
-	
-	color: #555555;
-	font-family: Arial;
-	font-size: 10px;
-	margin: 0 auto;
-	width: 750px;
-}
-
-.oneColFixCtr #legalSony {
-	
-	color: #666666;
-	font-family: Arial;
-	font-size: 12px;
-	margin: 0 auto;
-	width: 750px;
-}
-
-.oneColFixCtr #legalLogos table {
-	padding-top: 0px;
-	margin: 0 auto;
-	vertical-align: middle;
-}
-
-.oneColFixCtr #legalLogos td {
-	width: 150px;
-	text-align: center;
-	vertical-align: middle;
+	padding: 0 20px;
 }
 
 </style></head>
@@ -87,8 +63,8 @@ body {
 	<script>
 	    const vp = document.getElementById("container");
     
-        var sw = 1000;
-        var sh = 575;
+        var sw = 1216;
+        var sh = 707;
 		
 		async function getSWFSize(url) {
         const buffer = await fetch(url).then(r => r.arrayBuffer());
@@ -158,23 +134,66 @@ body {
     }
 
 	function resize() {
-        const scale = Math.min(
-            window.innerWidth / sw,
-            window.innerHeight / sh
-        );
-    
-        vp.style.transform =
-            `translate(0%, 5%) scale(${scale})`;
-    }
+
+		const backgroundWidth = 1695;
+		const backgroundHeight = 891;
+
+		const contentWidth = sw;
+		const contentHeight = sh;
+
+		/*
+		 * Escala usada pelo background.
+		 *
+		 * O background mantém a proporção 1695 × 891.
+		 */
+		const scale = Math.min(
+			window.innerWidth / backgroundWidth,
+			window.innerHeight / backgroundHeight
+		);
+
+		/*
+		 * O background fica centralizado.
+		 */
+		const renderedBackgroundWidth =
+			backgroundWidth * scale;
+
+		const renderedBackgroundHeight =
+			backgroundHeight * scale;
+
+		const backgroundLeft =
+			(window.innerWidth - renderedBackgroundWidth) / 2;
+
+		/*
+		 * A área 1216 × 707 começa 239.5px
+		 * depois da borda esquerda do background.
+		 */
+		const contentOffsetX =
+			(backgroundWidth - contentWidth) / 2;
+
+		const contentLeft =
+			backgroundLeft + (contentOffsetX * scale);
+
+		/*
+		 * Posiciona o Ruffle exatamente na área
+		 * correspondente dentro do background.
+		 */
+		vp.style.left = contentLeft + "px";
+		vp.style.top = "0px";
+
+		vp.style.width = contentWidth + "px";
+		vp.style.height = contentHeight + "px";
+
+		vp.style.transform =
+			`scale(${scale})`;
+
+		vp.style.transformOrigin = "top left";
+	}
 
     (async () => {
         const v = await getSWFSize("flash.swf");
     
         sw = v.width;
-        sh = v.height;
-    
-        // vp.style.width = sw + "px";
-        // vp.style.height = sh + "px";
+        sh = v.height * 1.25;
         
         window.addEventListener("resize", resize);
         resize();
