@@ -96,7 +96,7 @@ function popWin() {
 				`translate(-50%, -50%) scale(${scale})`;
 		}
        
-		var so = new SWFObject("swf/top.swf", "rings", sw, sh, "8", "#000000");
+		var so = new SWFObject("top.swf", "rings", sw, sh, "8", "#000000");
 
         so.addParam("allowFullScreen", "true");
         so.addParam("allowScriptAccess", "always");
@@ -104,8 +104,7 @@ function popWin() {
         so.addParam("wmode", "window");
         so.addParam("quality", "best");
         so.addParam("menu", "false");
-        
-		so.addParam("base", "swf/");
+
         so.write("flashcontent");
 		
 		window.addEventListener("resize", resize);
