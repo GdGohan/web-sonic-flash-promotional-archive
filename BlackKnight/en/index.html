@@ -28,7 +28,9 @@ body {
 .oneColFixCtr #container {
 	margin: 0 auto;
 	text-align: center;
-	width: 1000px;
+	position: absolute;
+	transform-origin: center center;
+	overflow: hidden;
 }
 .oneColFixCtr #mainContent {
 	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
@@ -155,14 +157,14 @@ body {
         };
     }
 
-		function resize() {
+	function resize() {
         const scale = Math.min(
             window.innerWidth / sw,
             window.innerHeight / sh
         );
     
         vp.style.transform =
-            `translate(0%, 0%) scale(${scale})`;
+            `translate(-50%, -25%) scale(${scale})`;
     }
 
     (async () => {
