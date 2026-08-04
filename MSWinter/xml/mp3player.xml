@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<player showDisplay="yes" showPlaylist="no" autoStart="yes">
+  <song path="mp3/opening.mp3" title="opening" />
+</player>
