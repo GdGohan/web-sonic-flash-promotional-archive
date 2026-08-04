@@ -8,7 +8,6 @@
 <meta name="desctiption" content="『ソニックと秘密のリング』公式サイトへようこそ！" />
 <title>ソニックと秘密のリング</title>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript" carset="utf-8"></script>
-<script src="swfobject.js" language="javascript" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
 function popWin() {
 	window.open("present.html","movie","width=520,height=600,location=0,menubar=0,personalbar=no,directories=no,scrollbars=1,status=0,toolbar=no,copyhistory=no,resizable=yes");
@@ -53,8 +52,7 @@ function popWin() {
 		}
 		
 	</style>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-	<script>
+    <script>
 		window.RufflePlayer = window.RufflePlayer || {};
 		window.RufflePlayer.config = {
 		    fontSources: [
@@ -65,10 +63,14 @@ function popWin() {
 			},
 			autoplay: "off",
 			unmuteOverlay: "visible",
+			base: "https://gdgohan.github.io/web-sonic-flash-promotional-archive/SecretRings/swf/",
 			// preferredRenderer: "canvas"
 		};
 		console.log("Ruffle config:", window.RufflePlayer.config);
 	</script>
+	
+	<script src="swfobject.js" language="javascript" type="text/javascript"></script>
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	
 	<script>
 
