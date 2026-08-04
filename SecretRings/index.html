@@ -57,6 +57,7 @@ function popWin() {
     <script>
 		window.RufflePlayer = window.RufflePlayer || {};
 		window.RufflePlayer.config = {
+		    logLevel: "info",
 		    fontSources: [
 				"../fonts/NotoSansJP-Regular.ttf"
 			],
@@ -109,10 +110,17 @@ function popWin() {
 
 		document.getElementById("flashcontent").innerHTML = "";
 		document.getElementById("flashcontent").appendChild(player);
+		
+		const base = new URL("./swf/", window.location.href).href;
+		const url = new URL("./swf/top.swf", window.location.href).href;
+
+		console.log("URL:", url);
+		console.log("BASE:", base);
+
 
 		player.load({
-			url: "swf/top.swf",
-			base: "swf/",
+			url: url,
+			base: base,
 
 			width: sw,
 			height: sh,
