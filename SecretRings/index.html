@@ -46,12 +46,15 @@ function popWin() {
 		}
 		
 		#flashcontent {
+		    left: 25%;
 		    position: absolute;
 		    transform-origin: center center;
 		    overflow: hidden;
 		}
 		
 	</style>
+
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <script>
 		window.RufflePlayer = window.RufflePlayer || {};
 		window.RufflePlayer.config = {
@@ -63,14 +66,10 @@ function popWin() {
 			},
 			autoplay: "off",
 			unmuteOverlay: "visible",
-			base: "https://gdgohan.github.io/web-sonic-flash-promotional-archive/SecretRings/swf/",
 			// preferredRenderer: "canvas"
 		};
 		console.log("Ruffle config:", window.RufflePlayer.config);
 	</script>
-	
-	<script src="swfobject.js" language="javascript" type="text/javascript"></script>
-	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	
 	<script>
 
@@ -99,19 +98,34 @@ function popWin() {
 			vp.style.transform =
 				`translate(-50%, -50%) scale(${scale})`;
 		}
-       
-		var so = new SWFObject("swf/top.swf", "rings", sw, sh, "8", "#000000");
-
-        so.addParam("allowFullScreen", "true");
-        so.addParam("allowScriptAccess", "always");
-      
-        so.addParam("wmode", "window");
-        so.addParam("quality", "best");
-        so.addParam("menu", "false");
 		
-		so.addParam("base", "https://gdgohan.github.io/web-sonic-flash-promotional-archive/SecretRings/swf/");
-        
-        so.write("flashcontent");
+		const ruffle = window.RufflePlayer.newest();
+		const player = ruffle.createPlayer();
+
+		player.id = "rings";
+		player.setAttribute("name", "rings");
+		
+		player.style.width = sw + "px";
+		player.style.height = sh + "px";
+
+		document.getElementById("flashcontent").innerHTML = "";
+		document.getElementById("flashcontent").appendChild(player);
+
+		player.load({
+			url: "swf/top.swf",
+			base: "swf/",
+
+			width: sw,
+			height: sh,
+			bgcolor: "#000000",
+
+			allowFullscreen: true,
+			allowScriptAccess: "always",
+
+			wmode: "window",
+			quality: "best",
+			menu: false
+		});
 		
 		window.addEventListener("resize", resize);
         resize();
