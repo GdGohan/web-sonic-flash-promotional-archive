@@ -65,14 +65,11 @@ function popWin() {
 		window.RufflePlayer.config = {
 		    logLevel: "info",
 		    fontSources: [
-				"../fonts/NotoSansJP-Regular.ttf"
+				"fonts/NotoSans-Bold.ttf"
 			],
-			defaultFonts: {
-				sans: ["Noto Sans JP Regular"],
-			},
 			autoplay: "off",
 			unmuteOverlay: "visible",
-			// preferredRenderer: "canvas"
+			// preferredRenderer: "webgl"
 		};
 		console.log("Ruffle config:", window.RufflePlayer.config);
 	</script>
@@ -117,15 +114,15 @@ function popWin() {
 		document.getElementById("flashcontent").innerHTML = "";
 		document.getElementById("flashcontent").appendChild(player);
 		
-		// const base = new URL("./swf/", window.location.href).href;
+		const base = new URL("./", window.location.href).href;
 		const url = new URL("./top.swf", window.location.href).href;
 
 		console.log("URL:", url);
-		// console.log("BASE:", base);
+		console.log("BASE:", base);
 
 		player.load({
 			url: url,
-			// base: base,
+			base: base,
 
 			width: sw,
 			height: sh,
