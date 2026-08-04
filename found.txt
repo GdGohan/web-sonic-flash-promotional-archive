@@ -16,3 +16,4 @@ https://flashmuseum.net/game/sonic-the-hedgehog-microsite-c1z/
 https://www.wondertrio.com/mike/websites/
 https://web.archive.org/web/20060707211203/http://www.sega.com/sonic/content.php
 https://web.archive.org/web/20060703120935/http://sonic.sega.jp/sonicadvdx/
+https://web.archive.org/web/*/http://trailers.gametrailers.com/gt_vault/*
