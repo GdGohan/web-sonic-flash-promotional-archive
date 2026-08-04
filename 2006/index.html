@@ -117,7 +117,7 @@ function popWin() {
 		document.getElementById("flashcontent").innerHTML = "";
 		document.getElementById("flashcontent").appendChild(player);
 		
-		const base = new URL("./swf/", window.location.href).href;
+		// const base = new URL("./swf/", window.location.href).href;
 		const url = new URL("./top.swf", window.location.href).href;
 
 		console.log("URL:", url);
@@ -125,7 +125,7 @@ function popWin() {
 
 		player.load({
 			url: url,
-			base: base,
+			// base: base,
 
 			width: sw,
 			height: sh,
